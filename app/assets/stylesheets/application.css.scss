@@ -1,0 +1,321 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+
+@mixin gradientBack {
+	background: linear-gradient(231deg, #5a48cb, #4077cf, #a248cb);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 13s ease infinite;
+	-moz-animation: AnimationName 13s ease infinite;
+	animation: AnimationName 13s ease infinite;
+}
+
+$white: #ffffff;
+$nice-blue: #4B62CD;
+$blue2: #4272CE;
+$gray: #DDDDDD;
+
+body {
+    @include gradientBack;
+    margin: 0;
+    color: $white;
+    font-family: 'Comfortaa';
+
+    header {
+
+        nav{
+            height: 60px;
+            width: 100%;
+            margin-top: 38px;
+            font-size: 1.4em;
+
+            ul {
+                float: right;
+                display: inline-block;
+            }
+
+            li {
+                float: right;
+                list-style-type: none;
+                margin-left: 20px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        #logo {
+                float: left;
+                margin-top: 25px;
+                margin-left: 60px;
+                color: $white;
+                font-size: 2.5em;
+                letter-spacing: 3px;
+                height: 50px;
+                width: 100%;
+
+                a {
+                    color: $white;
+                }
+            }
+    }
+
+    .top-index {
+        width: 100%;
+        height: 420px;
+    }
+
+    .about-index {
+        width: 100%;
+        height: 500px;
+        background-color: $white;
+
+        #tree-pic {
+            width: 500px;
+            padding-top: 50px;
+        }
+
+        #about-information {
+            color: #5a48cb;
+            text-align: justify;
+            font-size: 1.5em;
+            padding: 15px;
+            margin-top: 75px;
+        }
+    }
+
+    .index-login {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 200px;
+
+        ul li {
+            display: inline-block;
+            color: $white;
+            font-size: 1.7em;
+            padding: 15px;
+            border: 2px solid $white;
+            border-radius: 15px;
+        }
+
+        ul li:last-child {
+                margin-left: 40px;
+        }
+
+        ul a {
+            color: $white;
+        }
+    }
+
+    #short-info {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 50px;
+            color: $white;
+            font-size: 1.5em;
+            text-align: center;
+    }
+
+    #arrow1 {
+        width: 50px;
+        margin-left: 47.5%;
+        margin-top: 140px;
+
+    }
+
+
+    footer {
+        width: 100%;
+        height: 200px;
+        background-color: #333333;
+
+        .container {
+            text-align: center;
+            font-size: .9em;
+
+
+            ul {
+                padding-left: 0;
+
+                li {
+                    list-style-type: none;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .field_area {
+        border-radius: 15px;
+        width: 75%;
+    }
+
+    #signup, #login, #forgot {
+        text-align: center;
+    }
+
+    .short_line {
+        width: 50%;
+        margin-bottom: 45px;;
+    }
+
+    .new_user {
+        text-align: center;  
+        font-size: 1.3em;      
+    }
+
+    input {
+        margin-bottom: 45px;
+        width: 40%;
+        border-radius: 15px;
+        color: black;
+        text-align: center;
+    }
+
+    .rendered_links {
+        margin-bottom: 120px;
+        text-align: center;
+        font-size: 1.5em;
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+
+    #check_box {
+        width: 30px;
+        margin-bottom: 25px;
+    }
+
+    .dashboard {
+        width: 100%;
+        background-color: $white;
+        color: black;
+    }
+
+    #dashboard-area {
+
+        .greeting {
+            float: right;
+            position: relative;
+            top: 38px;
+            margin-top: 25px;
+            margin-right: 15px;
+            color: #FF7F0E;
+        }
+    }
+
+    #summary, #income, #expenses, #savings {
+        text-align: left;
+        margin-top: 20px;
+        color: $blue2;
+        margin-bottom: 130px;
+
+        input {
+            width: 150px;
+            margin-bottom: 10px;
+            color: $blue2
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    #expense_form, #income_form, #summary_form, #savings_form {
+        border-right: 1px solid $gray;
+        border-left: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        border-radius: 0 0 15px 15px;
+        margin-bottom: 50px;
+        
+        #summary-row1 {
+            margin-bottom: 100px;
+        }
+
+        h4 {
+            margin-bottom: 25px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #h1-center {
+            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+
+        #h1-left {
+            text-align: left;
+            font-size: 2em;
+            text-decoration: underline;
+            margin-bottom: 35px;
+        }
+
+        #column-before-graph {
+            border-right: 1px solid $gray;
+        }
+
+    }
+
+    #edit_account {
+        text-align: center;
+        a {
+            color: $white;
+            font-size: 1.8em;
+        }
+        
+        input {
+            color: $blue2;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

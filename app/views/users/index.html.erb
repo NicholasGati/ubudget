@@ -1,0 +1,25 @@
+<div class="top-index">
+		<div class="index-login">
+			<ul>
+				<li class="animated bounceInLeft"><%= link_to 'Sign Up!', new_user_registration_path %></li>
+				<li class="animated bounceInRight"><%= link_to 'Sign In!',new_user_session_path %></li>
+			</ul>
+		</div>
+		<div class="animated slideInUp" id="short-info">
+			<p >uBudget simplifies the budgeting experience!<br>Sign up today and start taking control over your finances.</p>
+		</div>
+		<%= link_to image_tag('arrow-down1.png', class: 'animated infinite pulse', id: 'arrow1'), "#about"%>
+</div>
+
+<div class="about-index" id="about">
+	<div class="container">
+		<div class="col-md-6">
+			<%= link_to image_tag('tree_graph.png', id: 'tree-pic') %>
+		</div>
+		<div class="col-md-6" id="about-information">
+			<h2>About uBudget</h2>
+			<hr>
+			<p>uBudget is all about simplicity. Our goal is to take the stress out of budgeting. We've used budgeting apps before and have found that, for most people, they're just way too complicated. uBudget enables you to easily keep track of your expenses without the need of sludging through an owner's manual in order to figure out how to use the software. Try out uBudget for free today and take control over your finances.</p>
+		</div>
+	</div>	
+</div>

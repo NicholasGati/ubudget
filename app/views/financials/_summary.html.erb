@@ -1,0 +1,26 @@
+<div class="summary_area">
+	<div class="container" id="summary_form">
+		<h1 id="h1-center">Summary</h1>
+		<h4>Total Surplus: $<%= @financial.credits - @financial.expenses %></h4>
+		<hr>
+		<div class="row" id-"summary-row1">
+			<div class="col-md-6" id="summary-income">
+				<p>Total income: $<%= @financial.credits %></p>
+				<%= render 'financials/credits_graph' %>
+			</div>
+		
+			<div class="col-md-6" id="summary-savings">
+				<p>Total savings: $<%= @financial.savings %></p>
+				<%= render 'financials/savings_graph' %>
+			</div>
+		</div>	
+		<hr>
+		<div class="row">
+
+			<div class="col-md-12" id="summary-expenses">
+				<p>Total expenses: $<%= @financial.expenses %></p>
+				<%= render 'financials/expenses_graph' %>
+			</div>
+		</div>	
+	</div>
+</div>	
