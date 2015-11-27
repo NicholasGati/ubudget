@@ -17,12 +17,6 @@
 
 $(document).on('page:change', function() {
 
-	// $('#arrow1').setTimeout(function() {
-	// 	$('#arrow1').addClass('animated bounce');
-	// 	$('#arrow1').removeClass('animated bounce'), 2000
-	// })
-
-
 		function scrollToTag(aid){
     var tag = $(aid);
     $('html,body').animate({scrollTop: tag.offset().top},'slow');
@@ -40,5 +34,6 @@ $(document).on('page:change', function() {
 	$('#myTabs a[href="#summary"]').tab('show') // Select tab by name
 	$('#myTabs a[href="#income"]').tab('show') // Select tab by name
 	$('#myTabs a[href="#expenses"]').tab('show') // Select tab by name
-	
+
 });
+
