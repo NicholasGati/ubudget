@@ -1,0 +1,23 @@
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+
+@mixin gradientBack {
+	background: linear-gradient(231deg, #5a48cb, #4077cf, #a248cb);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 13s ease infinite;
+	-moz-animation: AnimationName 13s ease infinite;
+	animation: AnimationName 13s ease infinite;
+}

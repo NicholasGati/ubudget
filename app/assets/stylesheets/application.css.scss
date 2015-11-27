@@ -14,35 +14,10 @@
  *= require_self
  */
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 90%}
-    50%{background-position:100% 11%}
-    100%{background-position:0% 90%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 90%}
-    50%{background-position:100% 11%}
-    100%{background-position:0% 90%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 90%}
-    50%{background-position:100% 11%}
-    100%{background-position:0% 90%}
-}
+@import 'mixins';
+@import 'variables';
 
-@mixin gradientBack {
-	background: linear-gradient(231deg, #5a48cb, #4077cf, #a248cb);
-	background-size: 600% 600%;
-	-webkit-animation: AnimationName 13s ease infinite;
-	-moz-animation: AnimationName 13s ease infinite;
-	animation: AnimationName 13s ease infinite;
-}
-
-$white: #ffffff;
-$nice-blue: #4B62CD;
-$blue2: #4272CE;
-$gray: #DDDDDD;
-
+/* full desktop screen */
 body {
     @include gradientBack;
     margin: 0;
@@ -74,19 +49,19 @@ body {
         }
 
         #logo {
-                float: left;
-                margin-top: 25px;
-                margin-left: 60px;
-                color: $white;
-                font-size: 2.5em;
-                letter-spacing: 3px;
-                height: 50px;
-                width: 100%;
+            float: left;
+            margin-top: 25px;
+            margin-left: 60px;
+            color: $white;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            height: 50px;
+            width: 100%;
 
-                a {
-                    color: $white;
-                }
+            a {
+                color: $white;
             }
+        }
     }
 
     .top-index {
@@ -305,6 +280,9 @@ body {
             color: $blue2;
         }
     }
+
+    @import 'ipad';
+    @import 'iphone';
 }
 
 
